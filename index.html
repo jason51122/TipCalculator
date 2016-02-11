@@ -21,6 +21,7 @@
 
     <script>
     function calculate() {
+      console.log(document.getElementById("amount").value);
       var amount = parseFloat(document.getElementById("amount").value).toFixed(2);
       console.log(amount);
       var tip = (amount / 1.095 * 0.15).toFixed(2);
