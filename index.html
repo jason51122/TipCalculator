@@ -30,8 +30,8 @@
       var amount = parseFloat(input).round(2);
       var tip = (amount / 1.095 * 0.15).round(2);
       var total = amount + tip;
-      document.getElementById("tip").innerHTML = "Tip: $" + tip;
-      document.getElementById("total").innerHTML = "Total: $" + total;
+      document.getElementById("tip").innerHTML = "Tip: $" + tip.toFixed(2);
+      document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2;
     }
     </script>
   </body>
