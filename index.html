@@ -13,9 +13,20 @@
     <section class="page-header">
       <h1 class="project-name">Tip Calculator</h1>
       <p></p>
-      <input type="number" id="amount" value="0.00"/>
+      <input type="number" id="amount" value="0.00" onkeypress="calculate()"/>
       <p id="tip" class="result">Tip: $0.00</p>
       <p id="total" class="result">Total: $0.00</p>
     </section>
+    <input type="text" >
+
+    <script>
+    function calculate() {
+      var amount = document.getElementById("amount").toFixed(2);
+      var tip = (amount / 1.095 * 0.15).toFixed(2);
+      var total = amount + tip;
+      document.getElementById("tip").innerHTML = "Tip: $" + tip;
+      document.getElementById("total").innerHTML = "Total: $" + total;
+    }
+    </script>
   </body>
 </html>
