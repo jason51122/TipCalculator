@@ -21,7 +21,7 @@
 
     <script>
     function calculate() {
-      var amount = document.getElementById("amount").toFixed(2);
+      var amount = document.getElementById("amount").value.toFixed(2);
       var tip = (amount / 1.095 * 0.15).toFixed(2);
       var total = amount + tip;
       document.getElementById("tip").innerHTML = "Tip: $" + tip;
