@@ -23,7 +23,7 @@
     function calculate() {
       var input = document.getElementById("amount").value;
       if (!input) {
-        input = "";
+        input = "0";
       }
       var amount = parseFloat(parseFloat(input).toFixed(2));
       var tip = parseFloat((amount / 1.095 * 0.15).toFixed(2));
