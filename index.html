@@ -21,13 +21,15 @@
 
     <script>
     function calculate() {
-      console.log(document.getElementById("amount").value);
-      var amount = parseFloat(parseFloat(document.getElementById("amount").value).toFixed(2));
-      console.log(amount);
-      var tip = parseFloat((amount / 1.095 * 0.15).toFixed(2));
-      console.log(tip);
+      var input = document.getElementById("amount").value;
+      
+      if (input.endsWith(".")) {
+        input += "0";
+      }
+      
+      var amount = parseFloat(input).round(2);
+      var tip = (amount / 1.095 * 0.15).round(2);
       var total = amount + tip;
-      console.log(total);
       document.getElementById("tip").innerHTML = "Tip: $" + tip;
       document.getElementById("total").innerHTML = "Total: $" + total;
     }
