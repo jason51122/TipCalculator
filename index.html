@@ -37,6 +37,9 @@
         input = "0";
       }
       var amount = parseFloat(parseFloat(input).toFixed(2));
+      if (amount == NaN) {
+        amount = 0;
+      }
       var tip = parseFloat((amount / 1.095 * 0.15).toFixed(2));
       var total = amount + tip;
       document.getElementById("tip").innerHTML = "Tip: $" + tip.toFixed(2);
