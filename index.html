@@ -24,20 +24,29 @@
     <section class="page-header">
       <h1 class="project-name">Tip Calculator</h1>
       <p></p>
-      <input type="text" id="amount" onkeyup="calculate()" autofocus/>
+      <input type="text" id="amount" onkeypress="checkKey(evt)" onkeyup="calculate()" autofocus/>
       <p id="tip" class="result">Tip: $0.00</p>
       <p id="total" class="result">Total: $0.00</p>
     </section>
     <input type="text" autofocus>
 
     <script>
+    function checkKey(evt) {
+      if (evt.which < 48 || evt.which > 57)
+      {
+          evt.preventDefault();
+      }
+    }
+    
     function calculate() {
       var input = document.getElementById("amount").value;
-      if (!input) {
+      if (!input)
+      {
         input = "0";
       }
       var amount = parseFloat(parseFloat(input).toFixed(2));
-      if (Number.isNaN(amount)) {
+      if (Number.isNaN(amount))
+      {
         amount = 0;
       }
       var tip = parseFloat((amount / 1.095 * 0.15).toFixed(2));
