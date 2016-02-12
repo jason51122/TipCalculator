@@ -32,10 +32,8 @@
 
     <script>
     function checkKey(event) {
-      if (evt.which < 48 || evt.which > 57)
-      {
-          evt.preventDefault();
-      }
+      var chCode = ('charCode' in event) ? event.charCode : event.keyCode;
+      return chCode == 46 || (chCode >= 48 && chCode <= 57);
     }
     
     function calculate() {
