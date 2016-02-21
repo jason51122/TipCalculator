@@ -25,6 +25,16 @@
       <h1 class="project-name">Tip Calculator</h1>
       <p></p>
       <input type="text" id="amount" onkeypress="return checkKey(event)" onkeyup="calculate()" autofocus/>
+      <select id="type" class="select">
+        <option value="1.095">After Tax</option>
+        <option value="1">Pre Tax</option>
+      </select>
+      <select id="percentage" class="select">
+        <option value="0.2">20%</option>
+        <option value="0.15">15%</option>
+        <option value="0.05">5%</option>
+        <option value="0">0%</option>
+      </select>
       <p id="tip" class="result">Tip: $0.00</p>
       <p id="total" class="result">Total: $0.00</p>
     </section>
