@@ -16,6 +16,11 @@ body {
   text-align: center;
   width: 215px; }
 
+#type {
+  width: 132px; }
+
+#percentage {
+  width: 72px; }
 .select {
   color: #155799;
   font-weight: bold; }
