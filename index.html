@@ -57,7 +57,11 @@
       {
         amount = 0;
       }
-      var tip = parseFloat((amount / 1.095 * 0.15).toFixed(2));
+      var typeElem = document.getElementById("type");
+      var type = parseFloat(typeElem.options[typeElem.selectedIndex].value);
+      var percentageElem = document.getElementById("percentage");
+      var percentage = parseFloat(percentageElem.options[percentageElem.selectedIndex].value);
+      var tip = parseFloat((amount / type * percentage).toFixed(2));
       var total = amount + tip;
       document.getElementById("tip").innerHTML = "Tip: $" + tip.toFixed(2);
       document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2);
