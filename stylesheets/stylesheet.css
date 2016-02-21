@@ -11,13 +11,13 @@ body {
   color: #606c71; }
 
 #amount {
-  color: black;
+  color: #155799;
   font-weight: bold;
   text-align: center;
   width: 215px; }
 
 .select {
-  color: black;
+  color: #155799;
   font-weight: bold; }
 
 .result {
