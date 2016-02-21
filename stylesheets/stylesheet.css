@@ -24,7 +24,8 @@ body {
   
 .select {
   color: #155799;
-  font-weight: bold; }
+  font-weight: bold;
+  text-align: center; }
 
 .result {
   font-weight: bold;
