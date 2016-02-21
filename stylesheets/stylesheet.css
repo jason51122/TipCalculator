@@ -15,8 +15,14 @@ body {
   font-weight: bold;
   text-align: center; }
 
-.result {
+.select {
+  color: black;
   font-weight: bold; }
+
+.result {
+  color: black;
+  font-weight: bold;
+  text-align: center; }
 
 a {
   color: #1e6bb8;
